@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Maison des Fleurs</title>
+    <link rel="stylesheet" href="../css/cart-style.css">
+    <link rel="stylesheet" href="../css/bouquets-style.css">
+    <link rel="stylesheet" href="../css/burger-menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">Maison des Fleurs</a>
+                
+                <!-- Desktop Navigation -->
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">ГЛАВНАЯ</a></li>
+                        <li><a href="bouquets.html">КАТАЛОГ</a></li>
+                        <li><a href="about.html">О НАС</a></li>
+                        <li><a href="contacts.html">КОНТАКТЫ</a></li>
+                        <li class="account-icon">
+                            <a href="account.html" class="icon-link" title="Мой аккаунт">
+                                <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="cart-icon">
+                            <a href="cart.html" class="cart-link active">
+                                <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                                </svg>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+  
+
+                <!-- Бургер-меню для мобильных -->
+                <button class="burger-menu" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            
+        
+        <!-- Мобильная навигация -->
+        <div class="mobile-nav">
+            <ul>
+                <li><a href="../index.html" class="mobile-nav-link">ГЛАВНАЯ</a></li>
+                <li><a href="bouquets.html" class="mobile-nav-link">КАТАЛОГ</a></li>
+                <li><a href="about.html" class="mobile-nav-link">О НАС</a></li>
+                <li><a href="contacts.html" class="mobile-nav-link">КОНТАКТЫ</a></li>
+                <!-- Иконки также в мобильном меню -->
+                <li class="mobile-account-icon">
+                    <a href="account.html" class="mobile-nav-link">
+                        <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                        Мой аккаунт
+                    </a>
+                </li>
+                <li class="mobile-cart-icon">
+                    <a href="cart.html" class="mobile-nav-link active">
+                        <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                        </svg>
+                        Корзина <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Затемнение фона -->
+        <div class="overlay"></div>
+    </header>
+
+    <div class="container">
+        <section class="cart-section">
+            <h1 class="page-title">Ваша корзина</h1>
+            
+            <div class="cart-content">
+                <!-- Сообщение о пустой корзине -->
+                <div class="empty-cart-message" id="empty-cart-message">
+                    <h2>Ваша корзина пуста</h2>
+                    <p>Добавьте товары из каталога, чтобы сделать заказ</p>
+                    <a href="bouquets.html" class="browse-btn">Перейти в каталог</a>
+                </div>
+                
+                <!-- Содержимое корзины -->
+                <div class="cart-items" id="cart-items">
+                    <!-- Товары будут добавляться динамически через JavaScript -->
+                </div>
+                
+                <!-- Итоги корзины -->
+                <div class="cart-summary" id="cart-summary">
+                    <div class="summary-row">
+                        <span>Товары (<span id="total-items">0</span>)</span>
+                        <span id="subtotal-price">0</span> ₽
+                    </div>
+                    <div class="summary-row">
+                        <span>Доставка</span>
+                        <span id="delivery-price">0</span> ₽
+                    </div>
+                    <div class="summary-row total">
+                        <span>Итого</span>
+                        <span id="total-price">0</span> ₽
+                    </div>
+                    
+                    <div class="checkout-actions">
+                        <a href="bouquets.html" class="continue-shopping">Продолжить покупки</a>
+                        <button class="checkout-btn" id="checkout-btn">Оформить заказ</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Магазин</h3>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Условия и рекомендации</h3>
+                    <ul>
+                        <li><a href="care.html">Уход за букетом</a></li>
+                        <li>Feedback@maison-fleurs.ru</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Телефон: +7 (495) 052-52-67</li>
+                        <li>Email: info@maison-fleurs.ru</li>
+                        <li>Адрес: Москва, Кривоколенный пер., 10, стр. 6</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Maison des Fleurs. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Модальное окно оформления заказа -->
+<div class="checkout-modal" id="checkout-modal">
+    <div class="modal-content">
+        <button class="close-modal" id="close-modal">&times;</button>
+        <h2>Оформление заказа</h2>
+        
+        <form id="checkout-form">
+            <div class="form-group">
+                <label for="order-name">Ваше имя *</label>
+                <input type="text" id="order-name" name="order-name" placeholder="Введите ваше имя">
+            </div>
+            
+            <div class="form-group">
+                <label for="order-phone">Ваш телефон *</label>
+                <input type="tel" id="order-phone" name="order-phone" placeholder="+7 (___) ___-__-__">
+            </div>
+            
+            <div class="form-group">
+                <label for="recipient-name">Имя получателя *</label>
+                <input type="text" id="recipient-name" name="recipient-name" placeholder="Введите имя получателя">
+            </div>
+            
+            <div class="form-group">
+                <label for="delivery-address">Адрес доставки *</label>
+                <textarea id="delivery-address" name="delivery-address" placeholder="Введите полный адрес доставки" rows="3"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="order-comment">Комментарий к заказу</label>
+                <textarea id="order-comment" name="order-comment" placeholder="Дополнительные пожелания" rows="3"></textarea>
+            </div>
+            
+            <div class="order-summary">
+                <h3>Детали заказа</h3>
+                <div class="summary-row">
+                    <span>Товары:</span>
+                    <span id="order-total-items">0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Сумма:</span>
+                    <span id="order-subtotal">0</span> ₽
+                </div>
+                <div class="summary-row">
+                    <span>Доставка:</span>
+                    <span id="order-delivery">0</span> ₽
+                </div>
+                <div class="summary-row total">
+                    <span>Итого к оплате:</span>
+                    <span id="order-total">0</span> ₽
+                </div>
+            </div>
+            
+            <div class="form-buttons">
+                <button type="button" class="cancel-btn" id="cancel-order">Отмена</button>
+                <button type="submit" class="confirm-btn">Подтвердить заказ</button>
+            </div>
+        </form>
+    </div>
+</div>
+    
+    <script src="../js/cart-script.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/burger.js"></script>
+    
+    
+    
+
+
+</body>
+</html>

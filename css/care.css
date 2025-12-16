@@ -1,0 +1,309 @@
+/* CSS стили для страницы "Уход за цветами" Maison des Fleurs */
+
+/* Стили для страницы "Уход за цветами" */
+.page-title {
+    text-align: center;
+    font-size: 48px;
+    margin: 50px 0 30px;
+    color: var(--green-dark);
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+}
+
+.care-section {
+    margin-bottom: 60px;
+}
+
+/* Блоки с информацией */
+.care-block, .storage-block, .flowers-table {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.care-block h2, .storage-block h2, .flowers-table h2 {
+    font-size: 24px;
+    color: var(--green-dark);
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--rose-light);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.care-content p, .storage-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--green-dark);
+}
+
+/* Советы по уходу */
+.care-tips {
+    margin-top: 30px;
+}
+
+.care-tip {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: rgba(232, 196, 196, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.care-tip:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.tip-icon {
+    background-color: var(--rose-light);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.tip-icon i {
+    font-size: 22px;
+    color: var(--green-dark);
+}
+
+.tip-content h3 {
+    font-size: 18px;
+    color: var(--green-dark);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.tip-content p {
+    font-size: 15px;
+    color: var(--green-medium);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Условия хранения */
+.storage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.storage-item {
+    background-color: var(--rose-light);
+    border-radius: 8px;
+    padding: 25px;
+    transition: transform 0.3s;
+}
+
+.storage-item:hover {
+    transform: translateY(-5px);
+}
+
+.storage-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.storage-header i {
+    font-size: 24px;
+    color: var(--rose-dark);
+    margin-right: 15px;
+}
+
+.storage-header h3 {
+    font-size: 18px;
+    color: var(--green-dark);
+    font-weight: 500;
+}
+
+.storage-item p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--green-medium);
+    margin-bottom: 0;
+}
+
+/* Важное примечание */
+.important-note {
+    display: flex;
+    align-items: flex-start;
+    background-color: rgba(45, 74, 59, 0.05);
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+    border-left: 4px solid var(--rose-dark);
+}
+
+.note-icon {
+    background-color: var(--rose-dark);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.note-icon i {
+    font-size: 20px;
+    color: var(--white);
+}
+
+.note-content h3 {
+    font-size: 18px;
+    color: var(--green-dark);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.note-content p {
+    font-size: 15px;
+    color: var(--green-medium);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Таблица */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+    background-color: var(--green-dark);
+    color: var(--white);
+}
+
+th {
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--rose-light);
+    transition: background-color 0.3s;
+}
+
+tbody tr:hover {
+    background-color: rgba(232, 196, 196, 0.1);
+}
+
+td {
+    padding: 18px 15px;
+    font-size: 15px;
+    color: var(--green-medium);
+}
+
+td strong {
+    color: var(--green-dark);
+    font-weight: 500;
+}
+
+/* Блок консультации */
+.consultation-block {
+    background-color: var(--green-dark);
+    border-radius: 8px;
+    padding: 50px 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.consultation-content h3 {
+    font-size: 24px;
+    color: var(--rose-light);
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.consultation-content p {
+    font-size: 17px;
+    color: var(--rose-light);
+    max-width: 700px;
+    margin: 0 auto 25px;
+    line-height: 1.6;
+}
+
+.consultation-btn {
+    display: inline-block;
+    background-color: var(--rose-medium);
+    color: var(--green-dark);
+    padding: 14px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s;
+    border: 2px solid var(--rose-medium);
+}
+
+.consultation-btn:hover {
+    background-color: transparent;
+    color: var(--rose-medium);
+    transform: translateY(-3px);
+}
+
+/* Дополнение к существующим медиазапросам */
+@media (max-width: 768px) {
+    .storage-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-title {
+        font-size: 32px;
+        margin: 30px 0 20px;
+    }
+    
+    .care-tip {
+        padding: 15px;
+    }
+    
+    .storage-item {
+        padding: 20px;
+    }
+    
+    th, td {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+    
+    .consultation-block {
+        padding: 30px 20px;
+    }
+    
+    .consultation-content h3 {
+        font-size: 20px;
+    }
+    
+    .consultation-content p {
+        font-size: 15px;
+    }
+}

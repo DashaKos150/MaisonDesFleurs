@@ -1,0 +1,376 @@
+/* CSS стили для страницы "О нас" Maison des Fleurs */
+
+/* Стили для страницы "О нас" */
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    margin: 50px 0 30px;
+    color: var(--green-dark);
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.about-section {
+    margin-bottom: 60px;
+}
+
+/* Блоки с текстом */
+.about-block {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.about-block h2 {
+    font-size: 25px;
+    color: var(--green-dark);
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--rose-light);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--green-dark);
+}
+
+.highlight-text {
+    font-style: italic;
+    font-size: 18px;
+    color: var(--rose-dark);
+    padding: 20px;
+    border-left: 3px solid var(--rose-medium);
+    background-color: rgba(232, 196, 196, 0.1);
+    margin-top: 30px;
+}
+
+/* Блок миссии */
+.mission-block {
+    background-color: var(--green-dark);
+    color: var(--white);
+    padding: 60px 40px;
+    border-radius: 8px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.mission-block h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--rose-light);
+}
+
+.mission-text {
+    font-size: 28px;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--rose-light);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Блок ценностей */
+.values-block {
+    margin: 60px 0;
+}
+
+.values-block h2 {
+    font-size: 24px;
+    color: var(--green-dark);
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.values-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.value-item {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.value-icon {
+    background-color: var(--rose-light);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.value-icon i {
+    font-size: 24px;
+    color: var(--green-dark);
+}
+
+.value-content h3 {
+    font-size: 18px;
+    color: var(--green-dark);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.value-content p {
+    font-size: 15px;
+    color: var(--green-medium);
+    line-height: 1.6;
+}
+
+/* Баннер в футере */
+.footer-banner {
+    margin:40px 0 30px;
+    text-align: center;
+}
+
+.footer-banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Блоки с текстом и изображением - как на главной странице */
+.about-block-with-image {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 0; /* Убираем внутренние отступы, они будут у внутренних элементов */
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    overflow: hidden; /* Чтобы изображение не выходило за границы скругления */
+}
+
+.about-block-content {
+    display: flex;
+    align-items: center;
+    min-height: 320px;
+}
+
+.about-block-text {
+    flex: 1;
+    padding: 30px;
+    text-align: left;
+}
+
+.about-block-text h2 {
+    font-size: 24px;
+    color: var(--green-dark);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rose-light);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-block-text p {
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--green-dark);
+}
+
+.about-block-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-block-image {
+    flex: 1;
+    height: 100%;
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.about-block-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Мобильная адаптация для страницы "О нас" */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 32px;
+        margin: 30px 0 20px;
+        letter-spacing: 1px;
+    }
+    
+    /* Блоки с текстом */
+    .about-block {
+        padding: 25px 20px;
+        margin-bottom: 30px;
+    }
+    
+    .about-block h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+    }
+    
+    .about-content p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    
+    .highlight-text {
+        font-size: 16px;
+        padding: 15px;
+        margin-top: 20px;
+    }
+    
+    /* Блоки с текстом и изображением - вертикальное расположение */
+    .about-block-content {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .about-block-text {
+        padding: 20px 15px;
+        order: 2;
+        text-align: center;
+    }
+    
+    .about-block-text h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .about-block-text p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+        text-align: left;
+    }
+    
+    .about-block-image {
+        min-height: 200px;
+        width: 100%;
+        order: 1;
+    }
+    
+    .about-block-image img {
+        object-fit: cover;
+    }
+    
+    /* Блок миссии */
+    .mission-block {
+        padding: 40px 20px;
+        margin: 40px 0;
+    }
+    
+    .mission-block h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .mission-text {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    
+    /* Блок ценностей */
+    .values-block {
+        margin: 40px 0;
+    }
+    
+    .values-block h2 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .values-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .value-item {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .value-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .value-icon i {
+        font-size: 20px;
+    }
+    
+    .value-content h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .value-content p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    /* Баннер в футере */
+    .footer-banner {
+        margin: 30px 0 20px;
+        text-align: center;
+    }
+    
+    .footer-banner img {
+        max-width: 90%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    /* Заголовки в блоках с флористами */
+    .about-block-text h3 {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: var(--green-dark);
+        font-weight: 500;
+    }
+    
+    /* Улучшение отступов */
+    section#about {
+        margin-bottom: 20px;
+    }
+    
+    .about-block-with-image {
+        margin-bottom: 100px;
+    }
+}
+

@@ -1,0 +1,120 @@
+/* CSS стили для страницы контактов Maison des Fleurs */
+
+/* Основной контент страницы "Контакты" */
+.contacts-section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: var(--green-dark);
+    position: relative;
+    font-weight: 300;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--rose-dark);
+    margin: 10px auto 0;
+}
+
+.contacts-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.contact-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-block:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--rose-dark);
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.contact-info h3 {
+    color: var(--green-dark);
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.contact-details p {
+    margin-bottom: 8px;
+    color: var(--green-dark);
+    font-size: 18px;
+}
+
+.contact-phone {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--rose-dark);
+    margin: 5px 0;
+}
+
+.contact-email {
+    font-size: 16px;
+    color: var(--rose-dark);
+    font-weight: 500;
+}
+
+/* Кнопки и ссылки */
+.contact-details a {
+    color: var(--rose-dark);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-details a:hover {
+    color: var(--green-dark);
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--rose-dark);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: var(--rose-medium);
+}

@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Букеты - Maison des Fleurs</title>
+    <link rel="stylesheet" href="../css/bouquets-style.css">
+    <link rel="stylesheet" href="../css/burger-menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">Maison des Fleurs</a>
+                
+                <!-- Desktop Navigation -->
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">ГЛАВНАЯ</a></li>
+                        <li><a href="bouquets.html" class="active">КАТАЛОГ</a></li>
+                        <li><a href="about.html">О НАС</a></li>
+                        <li><a href="contacts.html">КОНТАКТЫ</a></li>
+                        <li class="account-icon">
+                            <a href="account.html" class="icon-link" title="Мой аккаунт">
+                                <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="cart-icon">
+                            <a href="cart.html" class="cart-link">
+                                <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                                </svg>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Бургер-меню для мобильных -->
+                <button class="burger-menu" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            
+        
+        
+        <!-- Мобильная навигация -->
+        <div class="mobile-nav">
+            <ul>
+                <li><a href="../index.html" class="mobile-nav-link">ГЛАВНАЯ</a></li>
+                <li><a href="bouquets.html" class="mobile-nav-link" class="active"> КАТАЛОГ</a></li>
+                <li><a href="about.html" class="mobile-nav-link">О НАС</a></li>
+                <li><a href="contacts.html" class="mobile-nav-link">КОНТАКТЫ</a></li>
+                <!-- Иконки также в мобильном меню -->
+                <li class="mobile-account-icon">
+                    <a href="account.html" class="mobile-nav-link">
+                        <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                        Мой аккаунт
+                    </a>
+                </li>
+                <li class="mobile-cart-icon">
+                    <a href="cart.html" class="mobile-nav-link">
+                        <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                        </svg>
+                        Корзина <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Затемнение фона -->
+        <div class="overlay"></div>
+    </header>
+
+    <div class="container">
+        <section class="bouquets-section">
+            <h1 class="page-title">Весь каталог</h1>
+            <p class="page-subtitle">Все композиции от наших флористов</p>
+            
+
+            <div class="category-filters">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="avtorsk">Авторские</button>
+                <button class="filter-btn" data-filter="svadba">Свадебные</button>
+                <button class="filter-btn" data-filter="mono">Моно</button>
+                <button class="filter-btn" data-filter="interer">Для интерьера</button>
+                <button class="filter-btn" data-filter="seasonal">Сезонные</button>
+            </div>
+
+           
+            <div class="bouquets-grid">
+
+
+
+                   <!-- Букет 1 -->
+                <div class="bouquet-card" data-id="1">
+                    <div class="bouquet-image" style="background-image: url('../img/zimnskaska.jpg');">
+                        <div class="bouquet-overlay"></div>
+                        <div class="season-label winter">Зима</div>
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">БУКЕТ «ЗИМНЯЯ СКАЗКА</h3>
+                        <div class="bouquet-art">арт. 2601</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-1">Размер:</label>
+                            <select id="size-1" class="size-select" data-bouquet-id="1">
+                                <option value="small" data-price="7800">Малый - 7 800 ₽</option>
+                                <option value="medium" data-price="9800" selected>Стандартный - 9 800 ₽</option>
+                                <option value="large" data-price="11800">Роскошный - 11 800 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">9 800 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="1">В корзину</button>
+                    </div>
+                </div>
+
+
+                <!-- Букет 2 -->
+                <div class="bouquet-card" data-id="2">
+                    <div class="bouquet-image" style="background-image: url('../img/francerose.jpg');">
+                        <div class="bouquet-overlay"></div>
+                        <div class="season-label autumn">Осень</div>
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">БУКЕТ «ДЖУЛЬЕТТА»</h3>
+                        <div class="bouquet-art">арт. 2602</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-2">Размер:</label>
+                            <select id="size-2" class="size-select" data-bouquet-id="2">
+                                <option value="small" data-price="6200">Малый - 6 200 ₽</option>
+                                <option value="medium" data-price="8200" selected>Стандартный - 8 200 ₽</option>
+                                <option value="large" data-price="10200">Роскошный - 10 200 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">8 200 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="2">В корзину</button>
+                    </div>
+                </div>
+                
+               
+                 <!-- Букет 3 -->
+                 <div class="bouquet-card" data-id="3">
+                    <div class="bouquet-image" style="background-image: url('../img/leto.jpg');">
+                        <div class="bouquet-overlay"></div>
+                        <div class="season-label summer">Лето</div>
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">ЛЕТНИЙ РАССВЕТ</h3>
+                        <div class="bouquet-art">арт. 2603</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-3">Размер:</label>
+                            <select id="size-3" class="size-select" data-bouquet-id="3">
+                                <option value="small" data-price="2900">Малый - 2 900 ₽</option>
+                                <option value="medium" data-price="3900" selected>Стандартный -  3 900 ₽</option>
+                                <option value="large" data-price="5200">Роскошный - 5 200 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">3 900 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="3">В корзину</button>
+                    </div>
+                </div>
+
+                 <!-- Букет 4 -->
+                <div class="bouquet-card" data-id="4">
+                    <div class="bouquet-image" style="background-image: url('../img/osen.jpg');">
+                        <div class="bouquet-overlay"></div>
+                        <div class="season-label autumn">Осень</div>
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">ОСЕННЯЯ СИМФОНИЯ С ГОРТЕНЗИЕЙ</h3>
+                        <div class="bouquet-art">арт. 2604</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-4">Размер:</label>
+                            <select id="size-4" class="size-select" data-bouquet-id="4">
+                                <option value="small" data-price="8500">Малый - 8 500 ₽</option>
+                                <option value="medium" data-price="10500" selected>Стандартный - 10 500 ₽</option>
+                                <option value="large" data-price="12500">Роскошный - 12 500 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">10 500 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="4">В корзину</button>
+                    </div>
+                </div>
+
+
+              
+                  <!-- Букет 5 -->
+                  <div class="bouquet-card" data-id="5">
+                    <div class="bouquet-image" style="background-image: url('../img/divo.jpg');">
+                        <div class="bouquet-overlay"></div>
+                        <div class="season-label spring">Весна</div>
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">БУКЕТ «ДИВО»</h3>
+                        <div class="bouquet-art">арт. 2605</div>
+                        
+                        <!-- Выбор размера -->
+                        <div class="size-selection">
+                            <label for="size-5">Размер:</label>
+                            <select id="size-5" class="size-select" data-bouquet-id="5">
+                                <option value="small" data-price="7500">Малый - 7 500 ₽</option>
+                                <option value="medium" data-price="9500" selected>Стандартный - 9 500 ₽</option>
+                                <option value="large" data-price="11500">Роскошный - 11 500 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">9 500 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="5">В корзину</button>
+                    </div>
+                </div>
+                
+                
+                 <!-- Букет 6 -->
+                 <div class="bouquet-card" data-id="6">
+                    <div class="bouquet-image" style="background-image: url('../img/sadrosa.jpg');">
+                        <div class="bouquet-overlay"></div>
+                        <div class="season-label winter">Зима</div>
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">БУКЕТ «САДОВЫЕ РОЗЫ»</h3>
+                        <div class="bouquet-art">арт. 2606</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-6">Размер:</label>
+                            <select id="size-6" class="size-select" data-bouquet-id="6">
+                                <option value="small" data-price="8500">Малый - 8 500 ₽</option>
+                                <option value="medium" data-price="10500" selected>Стандартный - 10 500 ₽</option>
+                                <option value="large" data-price="12500">Роскошный - 12 500 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">10 500 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="6">В корзину</button>
+                    </div>
+                </div>
+            
+
+                <!-- Букет 7 -->
+                <div class="bouquet-card" data-id="7">
+                    <div class="bouquet-image" style="background-image: url('../img/wedding1.jpg');">
+                        <div class="bouquet-overlay"></div>
+                        
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name"> СВАДЕБНЫЙ БУКЕТ «СИЛУЭТ» </h3>
+                        <div class="bouquet-art">арт. 2607</div>
+                        
+                        <!-- Выбор размера -->
+                        <div class="size-selection">
+                            <label for="size-7">Размер:</label>
+                            <select id="size-7" class="size-select" data-bouquet-id="7">
+                                <option value="small" data-price="7500">Малый - 7 500 ₽</option>
+                                <option value="medium" data-price="9500" selected>Стандартный - 9 500 ₽</option>
+                                <option value="large" data-price="11500">Роскошный - 11 500 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">9 500 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="7">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 8 -->
+                <div class="bouquet-card" data-id="8">
+                    <div class="bouquet-image" style="background-image: url('../img/wedding2.jpg');">
+                        <div class="bouquet-overlay"></div>
+                        
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name"> СВАДЕБНЫЙ БУКЕТ «СИМФОНИЯ» </h3>
+                        <div class="bouquet-art">арт. 2608</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-8">Размер:</label>
+                            <select id="size-8" class="size-select" data-bouquet-id="8">
+                                <option value="small" data-price="6500">Малый - 6 500 ₽</option>
+                                <option value="medium" data-price="8500" selected>Стандартный - 8 500 ₽</option>
+                                <option value="large" data-price="10500">Роскошный - 10 500 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">8 500 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="8">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 9 -->
+                <div class="bouquet-card" data-id="9">
+                    <div class="bouquet-image" style="background-image: url('../img/wedding3.jpg');">
+                        <div class="bouquet-overlay"></div>
+                        
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name"> СВАДЕБНЫЙ БУКЕТ «ШЕПОТ ЗЕЛЕНИ»</h3>
+                        <div class="bouquet-art">арт. 2609</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-9">Размер:</label>
+                            <select id="size-9" class="size-select" data-bouquet-id="9">
+                                <option value="small" data-price="4900">Малый - 4 900 ₽</option>
+                                <option value="medium" data-price="6900" selected>Стандартный - 6 900 ₽</option>
+                                <option value="large" data-price="8900">Роскошный - 8 900 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">6 900 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="9">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 10 -->
+                <div class="bouquet-card" data-id="10">
+                    <div class="bouquet-image" style="background-image: url('../img/wedding4.jpg');">
+                        <div class="bouquet-overlay"></div>
+                     
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name"> СВАДЕБНЫЙ БУКЕТ «СОЛНЦЕ»</h3>
+                        <div class="bouquet-art">арт. 2610</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-10">Размер:</label>
+                            <select id="size-10" class="size-select" data-bouquet-id="10">
+                                <option value="small" data-price="7500">Малый - 7 500 ₽</option>
+                                <option value="medium" data-price="9500" selected>Стандартный - 9 500 ₽</option>
+                                <option value="large" data-price="11500">Роскошный - 11 500 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">9 500 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="10">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 11 -->
+                <div class="bouquet-card" data-id="11">
+                    <div class="bouquet-image" style="background-image: url('../img/wedding5.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name"> СВАДЕБНЫЙ БУКЕТ «ЭСКИЗ»</h3>
+                        <div class="bouquet-art">арт. 2611</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-11">Размер:</label>
+                            <select id="size-11" class="size-select" data-bouquet-id="11">
+                                <option value="small" data-price="5500">Малый - 5 500 ₽</option>
+                                <option value="medium" data-price="7500" selected>Стандартный - 7 500 ₽</option>
+                                <option value="large" data-price="9500">Роскошный - 9 500 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">7 500 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="11">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 12 -->
+                <div class="bouquet-card" data-id="12">
+                    <div class="bouquet-image" style="background-image: url('../img/wedding6.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name"> СВАДЕБНЫЙ БУКЕТ «ОБЛАКО»</h3>
+                        <div class="bouquet-art">арт. 2612</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-12">Размер:</label>
+                            <select id="size-12" class="size-select" data-bouquet-id="12">
+                                <option value="small" data-price="7800">Малый - 7 800 ₽</option>
+                                <option value="medium" data-price="9800" selected>Стандартный - 9 800 ₽</option>
+                                <option value="large" data-price="11800">Роскошный - 11 800 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">9 800 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="12">В корзину</button>
+                    </div>
+                </div>
+
+                 <!-- Букет 13 -->
+                 <div class="bouquet-card" data-id="13">
+                    <div class="bouquet-image" style="background-image: url('../img/author1.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">АВТОРСКИЙ БУКЕТ «МЭРИ»</h3>
+                        <div class="bouquet-art">арт. 2613</div>
+                        
+                        <!-- Выбор размера -->
+                        <div class="size-selection">
+                            <label for="size-13">Размер:</label>
+                            <select id="size-13" class="size-select" data-bouquet-id="13">
+                                <option value="small" data-price="8500">Малый - 8 500 ₽</option>
+                                <option value="medium" data-price="10500" selected>Стандартный - 10 500 ₽</option>
+                                <option value="large" data-price="12500">Роскошный - 12 500 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">10 500 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="13">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 14 -->
+                <div class="bouquet-card" data-id="14">
+                    <div class="bouquet-image" style="background-image: url('../img/author2.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">АВТОРСКИЙ БУКЕТ «ТЕНИ В РАЮ»</h3>
+                        <div class="bouquet-art">арт. 2614</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-14">Размер:</label>
+                            <select id="size-14" class="size-select" data-bouquet-id="14">
+                                <option value="small" data-price="7200">Малый - 7 200 ₽</option>
+                                <option value="medium" data-price="9200" selected>Стандартный - 9 200 ₽</option>
+                                <option value="large" data-price="11200">Роскошный - 11 200 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">9 200 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="14">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 15 -->
+                <div class="bouquet-card" data-id="15">
+                    <div class="bouquet-image" style="background-image: url('../img/author3.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name"> АВТОРСКИЙ БУКЕТ «КАПРИЗ» /<h3>
+                        <div class="bouquet-art">арт. 2615</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-15">Размер:</label>
+                            <select id="size-15" class="size-select" data-bouquet-id="15">
+                                <option value="small" data-price="7900">Малый - 7 900 ₽</option>
+                                <option value="medium" data-price="9900" selected>Стандартный - 9 900 ₽</option>
+                                <option value="large" data-price="11900">Роскошный - 11 900 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">9 900 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="15">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 16 -->
+                <div class="bouquet-card" data-id="16">
+                    <div class="bouquet-image" style="background-image: url('../img/author4.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">АВТОРСКИЙ БУКЕТ «КРУЖЕВА» </h3>
+                        <div class="bouquet-art">арт. 2616</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-16">Размер:</label>
+                            <select id="size-16" class="size-select" data-bouquet-id="16">
+                                <option value="small" data-price="8900">Малый - 8 900 ₽</option>
+                                <option value="medium" data-price="10900" selected>Стандартный - 10 900 ₽</option>
+                                <option value="large" data-price="11900">Роскошный - 12 900 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">10 900 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="16">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 17 -->
+                <div class="bouquet-card" data-id="17">
+                    <div class="bouquet-image" style="background-image: url('../img/author5.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name"> АВТОРСКИЙ БУКЕТ «МЕЛОДИЯ» </h3>
+                        <div class="bouquet-art">арт. 2617</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-17">Размер:</label>
+                            <select id="size-17" class="size-select" data-bouquet-id="17">
+                                <option value="small" data-price="8500">Малый - 8 500 ₽</option>
+                                <option value="medium" data-price="10500" selected>Стандартный - 10 500 ₽</option>
+                                <option value="large" data-price="12500">Роскошный - 12 500 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">10 500 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="17">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 18 -->
+                <div class="bouquet-card" data-id="18">
+                    <div class="bouquet-image" style="background-image: url('../img/author6.jpg');">
+                        <div class="bouquet-overlay"></div>
+         
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">АВТОРСКИЙ БУКЕТ «СКАЗКА» </h3>
+                        <div class="bouquet-art">арт. 2618</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-18">Размер:</label>
+                            <select id="size-18" class="size-select" data-bouquet-id="18">
+                                <option value="small" data-price="7800">Малый - 7 800 ₽</option>
+                                <option value="medium" data-price="9800" selected>Стандартный - 9 800 ₽</option>
+                                <option value="large" data-price="11800">Роскошный - 11 800 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">9 800 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="18">В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Букет 19 -->
+                <div class="bouquet-card" data-id="19" >
+                    <div class="bouquet-image" style="background-image: url('../img/mono1.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">МОНОБУКЕТ ИЗ ФРАНЦУЗСКОЙ РОЗЫ</h3>
+                        <div class="bouquet-art">арт. 2619</div>
+                        
+                        <!-- Выбор размера -->
+                        <div class="size-selection">
+                            <label for="size-19">Размер:</label>
+                            <select id="size-19" class="size-select" data-bouquet-id="19">
+                                <option value="small" data-price="9500">Малый - 9 500 ₽</option>
+                                <option value="medium" data-price="11500" selected>Стандартный - 11 500 ₽</option>
+                                <option value="large" data-price="13500">Роскошный - 13 500 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">11 500 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="19">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 20 -->
+                <div class="bouquet-card" data-id="20">
+                    <div class="bouquet-image" style="background-image: url('../img/mono2.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">МОНОБУКЕТ ИЗ РАНУНКУЛЮСОВ </h3>
+                        <div class="bouquet-art">арт. 2620</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-20">Размер:</label>
+                            <select id="size-20" class="size-select" data-bouquet-id="20">
+                                <option value="small" data-price="7200">Малый - 7 200 ₽</option>
+                                <option value="medium" data-price="9200" selected>Стандартный - 9 200 ₽</option>
+                                <option value="large" data-price="11200">Роскошный - 11 200 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">9 200 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="20">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 21 -->
+                <div class="bouquet-card" data-id="21">
+                    <div class="bouquet-image" style="background-image: url('../img/mono3.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">МОНОБУКЕТ ИЗ КУСТОВЫХ РОЗ </h3>
+                        <div class="bouquet-art">арт. 2621</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-21">Размер:</label>
+                            <select id="size-21" class="size-select" data-bouquet-id="21">
+                                <option value="small" data-price="7900">Малый - 7 900 ₽</option>
+                                <option value="medium" data-price="9900" selected>Стандартный - 9 900 ₽</option>
+                                <option value="large" data-price="11900">Роскошный - 11 900 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">9 900 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="21">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 22 -->
+                <div class="bouquet-card" data-id="22">
+                    <div class="bouquet-image" style="background-image: url('../img/mono4.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">МОНОБУКЕТ «ЗЕФИРНАЯ НЕЖНОСТЬ»</h3>
+                        <div class="bouquet-art">арт. 2622</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-22">Размер:</label>
+                            <select id="size-22" class="size-select" data-bouquet-id="22">
+                                <option value="small" data-price="8500">Малый - 8 500 ₽</option>
+                                <option value="medium" data-price="10500" selected>Стандартный - 10 500 ₽</option>
+                                <option value="large" data-price="12500">Роскошный - 12 500 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">10 500 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="22">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 23 -->
+                <div class="bouquet-card" data-id="23">
+                    <div class="bouquet-image" style="background-image: url('../img/mono5.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">МОНОБУКЕТ ИЗ ФРАНЦУЗКИХ РОЗ</h3>
+                        <div class="bouquet-art">арт. 2623</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-5">Размер:</label>
+                            <select id="size-5" class="size-select" data-bouquet-id="23">
+                                <option value="small" data-price="8500">Малый - 8 500 ₽</option>
+                                <option value="medium" data-price="10500" selected>Стандартный - 10 500 ₽</option>
+                                <option value="large" data-price="12500">Роскошный - 12 500 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">10 500 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="5">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 24 -->
+                <div class="bouquet-card" data-id="24">
+                    <div class="bouquet-image" style="background-image: url('../img/mono6.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">МОНОБУКЕТ ИЗ ФРАНЦУЗКИХ РОЗ </h3>
+                        <div class="bouquet-art">арт. 2624</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-24">Размер:</label>
+                            <select id="size-24" class="size-select" data-bouquet-id="24">
+                                <option value="small" data-price="7800">Малый - 7 800 ₽</option>
+                                <option value="medium" data-price="9800" selected>Стандартный - 9 800 ₽</option>
+                                <option value="large" data-price="11800">Роскошный - 11 800 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">9 800 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="24">В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Букет 25 -->
+                <div class="bouquet-card" data-id="25">
+                    <div class="bouquet-image" style="background-image: url('../img/interior1.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">ИНТЕРЬЕРНАЯ КОМПОЗИЦИЯ №1</h3>
+                        <div class="bouquet-art">арт. 2625</div>
+                        
+                        <!-- Выбор размера -->
+                        <div class="size-selection">
+                            <label for="size-25">Размер:</label>
+                            <select id="size-25" class="size-select" data-bouquet-id="25">
+                                <option value="small" data-price="11500">Малый - 11 500 ₽</option>
+                                <option value="medium" data-price="13500" selected>Стандартный - 13 500 ₽</option>
+                                <option value="large" data-price="15500">Роскошный - 15 500 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">13 500 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="25">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 26 -->
+                <div class="bouquet-card" data-id="26">
+                    <div class="bouquet-image" style="background-image: url('../img/interior2.jpg');">
+                        <div class="bouquet-overlay"></div>
+  
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">ИНТЕРЬЕРНАЯ КОМПОЗИЦИЯ №2</h3>
+                        <div class="bouquet-art">арт. 2626</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-26">Размер:</label>
+                            <select id="size-26" class="size-select" data-bouquet-id="26">
+                                <option value="small" data-price="12200">Малый -  12 200 ₽</option>
+                                <option value="medium" data-price="14200" selected>Стандартный - 14 200 ₽</option>
+                                <option value="large" data-price="16200">Роскошный - 16 200 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">14 200 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="26">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 27 -->
+                <div class="bouquet-card" data-id="27">
+                    <div class="bouquet-image" style="background-image: url('../img/interior3.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">ИНТЕРЬЕРНАЯ КОМПОЗИЦИЯ №3</h3>
+                        <div class="bouquet-art">арт. 2627</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-27">Размер:</label>
+                            <select id="size-27" class="size-select" data-bouquet-id="27">
+                                <option value="small" data-price="14900">Малый - 14 900 ₽</option>
+                                <option value="medium" data-price="16900" selected>Стандартный - 16 900 ₽</option>
+                                <option value="large" data-price="18900">Роскошный - 18 900 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">16 900 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="27">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 28 -->
+                <div class="bouquet-card" data-id="28">
+                    <div class="bouquet-image" style="background-image: url('../img/interior4.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">ИНТЕРЬЕРНАЯ КОМПОЗИЦИЯ №4</h3>
+                        <div class="bouquet-art">арт. 2628</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-28">Размер:</label>
+                            <select id="size-28" class="size-select" data-bouquet-id="28">
+                                <option value="small" data-price="12900">Малый - 12 900 ₽</option>
+                                <option value="medium" data-price="14900" selected>Стандартный - 14 900 ₽</option>
+                                <option value="large" data-price="16900">Роскошный - 16 900 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">14 900 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="28">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 29 -->
+                <div class="bouquet-card" data-id="29">
+                    <div class="bouquet-image" style="background-image: url('../img/interior5.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">ИНТЕРЬЕРНАЯ КОМПОЗИЦИЯ №5</h3>
+                        <div class="bouquet-art">арт. 2629</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-29">Размер:</label>
+                            <select id="size-29" class="size-select" data-bouquet-id="29">
+                                <option value="small" data-price="9500">Малый - 9 500 ₽</option>
+                                <option value="medium" data-price="11500" selected>Стандартный - 11 500 ₽</option>
+                                <option value="large" data-price="13500">Роскошный - 13 500 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">11 500 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="29">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Букет 30 -->
+                <div class="bouquet-card" data-id="30">
+                    <div class="bouquet-image" style="background-image: url('../img/interior6.jpg');">
+                        <div class="bouquet-overlay"></div>
+
+                    </div>
+                    <div class="bouquet-info">
+                        <h3 class="bouquet-name">ИНТЕРЬЕРНАЯ КОМПОЗИЦИЯ №6</h3>
+                        <div class="bouquet-art">арт. 2630</div>
+                        
+                        <div class="size-selection">
+                            <label for="size-30">Размер:</label>
+                            <select id="size-30" class="size-select" data-bouquet-id="30">
+                                <option value="small" data-price="9800">Малый - 9 800 ₽</option>
+                                <option value="medium" data-price="11800" selected>Стандартный - 11 800 ₽</option>
+                                <option value="large" data-price="13800">Роскошный - 13 800 ₽</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bouquet-price">11 800 ₽</div>
+                        <button class="add-to-cart" data-bouquet-id="30">В корзину</button>
+                    </div>
+                </div>
+
+            
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Магазин</h3>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Условия и рекомендации</h3>
+                    <ul>
+                        <li><a href="care.html">Уход за букетом</a></li>
+                        <li>Feedback@maison-fleurs.ru</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Телефон: +7 (495) 052-52-67</li>
+                        <li>Email: info@maison-fleurs.ru</li>
+                        <li>Адрес: Москва, Кривоколенный пер., 10, стр. 6</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Maison des Fleurs. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/bouquets-script.js"></script>
+    <script src="../js/filters.js"></script>
+    <script src="../js/burger.js"></script>
+</body>
+</html>

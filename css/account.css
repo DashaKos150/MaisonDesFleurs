@@ -1,0 +1,228 @@
+/* account.css - стили для страницы аккаунта */
+
+/* Остальные стили для страницы аккаунта */
+.account-section {
+    padding: 40px 0 80px;
+    min-height: 70vh;
+}
+
+.account-section h1{
+    font-size: px;
+}
+
+
+.account-container {
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+/* Карточка аккаунта */
+.account-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.account-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--rose-light);
+}
+
+.account-header h2 {
+    font-size: 25px;
+    color: var(--green-dark);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+}
+
+.account-header h2 i {
+    margin-right: 10px;
+    color: var(--rose-dark);
+    font-size: 26px;
+}
+
+.account-header p {
+    color: var(--green-medium);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Форма */
+.account-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--green-dark);
+    font-size: 19px;
+}
+
+.form-group label i {
+    margin-right: 10px;
+    color: var(--rose-dark);
+    width: 20px;
+    text-align: center;
+
+}
+
+.required {
+    color: #e74c3c;
+    margin-left: 3px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid var(--rose-medium);
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--green-dark);
+    background: var(--white);
+    transition: all 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--green-dark);
+    box-shadow: 0 0 0 3px rgba(45, 74, 59, 0.1);
+}
+
+/* Исправленное поле телефона */
+.phone-input-wrapper {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.phone-input-wrapper:focus-within {
+    border-color: var(--green-dark);
+    box-shadow: 0 0 0 3px rgba(45, 74, 59, 0.1);
+}
+
+.phone-prefix {
+    padding: 15px 20px;
+    color: var(--green-dark);
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+}
+
+.phone-input-wrapper input {
+    border: none;
+    border-radius: 0;
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 16px;
+}
+
+.phone-input-wrapper input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.form-hint {
+    font-size: 14px;
+    color: var(--green-medium);
+    margin-top: 8px;
+    font-style: italic;
+    padding-left: 30px;
+}
+
+/* Кнопки */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid var(--rose-light);
+}
+
+.btn-save,
+.btn-reset {
+    flex: 1;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-save {
+    background: var(--green-dark);
+    color: var(--white);
+}
+
+.btn-save:hover {
+    background: var(--green-medium);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(45, 74, 59, 0.2);
+}
+
+.btn-reset {
+    background: var(--rose-light);
+    color: var(--green-dark);
+    border: 2px solid var(--rose-medium);
+}
+
+.btn-reset:hover {
+    background: var(--rose-medium);
+    border-color: var(--rose-dark);
+}
+
+/* Уведомление */
+.notification {
+    background: rgba(60, 110, 74, 0.1);
+    border: 2px solid var(--green-medium);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    display: none;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.notification-content i {
+    font-size: 32px;
+    color: var(--green-medium);
+}
+
+.notification-content h4 {
+    color: var(--green-dark);
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.notification-content p {
+    color: var(--green-medium);
+    font-size: 14px;
+}

@@ -1,0 +1,524 @@
+/* CSS стили для страницы букетов Maison des Fleurs */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat ';
+}
+
+:root {
+    --rose-light: #f8e8e8;
+    --rose-medium: #e8c4c4;
+    --rose-dark: #d4a5a5;
+    --green-dark: #2d4a3b;
+    --green-medium: #3c6e4a;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--rose-light);
+    color: var(--green-dark);
+    line-height: 1.6;
+    margin: 0;
+    font-family: "Montserrat";
+    background-color: #F7EDEE;
+    color: #23412E;
+    /* Фоновая картинка */
+    background-image: linear-gradient(rgba(247, 237, 238, 0.9), rgba(247, 237, 238, 0.9)),
+                      url('https://img.freepik.com/free-photo/closeup-greyscale-shot-eiffel-tower-paris-france_181624-18312.jpg?semt=ais_hybrid&w=740');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Фиксированный фон */
+    background-repeat: no-repeat;
+    /* Делаем body flex-контейнером для прижатия футера */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Хедер и навигация */
+header {
+    background-color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Добавляем автоматический отступ снизу для основного контента */
+    flex: 1;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--green-dark);
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 25px;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--green-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 15px;
+}
+
+nav a:hover, nav a.active {
+    color: var(--rose-dark);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--rose-dark);
+    transition: width 0.3s;
+}
+
+nav a:hover::after, nav a.active::after {
+    width: 100%;
+}
+
+/* Иконка корзины */
+.cart-icon {
+    margin-left: 30px;
+    position: relative;
+}
+
+.cart-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--green-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.cart-link:hover {
+    color: var(--rose-dark);
+}
+
+.cart-count {
+    background-color: var(--rose-dark);
+    color: var(--white);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Заголовок страницы */
+.page-title {
+    text-align: center;
+    font-size: 36px;
+    margin: 40px 0 10px;
+    color: var(--green-dark);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.page-subtitle {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 50px;
+    color: var(--rose-dark);
+    font-weight: 300;
+}
+
+/* Стили для фильтров категорий */
+.category-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
+.filter-btn {
+    padding: 12px 24px;
+    background-color: var(--white);
+    color: var(--green-dark);
+    border: 2px solid var(--rose-medium);
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+    text-align: center;
+}
+
+.filter-btn:hover {
+    background-color: var(--rose-light);
+    border-color: var(--rose-dark);
+}
+
+.filter-btn.active {
+    background-color: var(--green-dark);
+    color: var(--white);
+    border-color: var(--green-dark);
+}
+
+/* Стили для скрытых букетов */
+.bouquet-card.hidden {
+    display: none;
+}
+
+/* Сетка букетов */
+.bouquets-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 90px;
+}
+
+.bouquet-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bouquet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.bouquet-image {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.bouquet-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+    transition: background 0.3s;
+}
+
+.bouquet-card:hover .bouquet-overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 100%);
+}
+
+.bouquet-info {
+    padding: 20px;
+}
+
+.bouquet-name {
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: var(--green-dark);
+    font-size: 16px;
+    line-height: 1.4;
+    min-height: 45px;
+}
+
+.bouquet-art {
+    color: var(--green-medium);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Выбор размера */
+.size-selection {
+    margin-bottom: 15px;
+}
+
+.size-selection label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var(--green-dark);
+    font-weight: 500;
+}
+
+.size-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--rose-medium);
+    border-radius: 4px;
+    background-color: var(--white);
+    color: var(--green-dark);
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.size-select:focus {
+    outline: none;
+    border-color: var(--green-dark);
+}
+
+.bouquet-price {
+    color: var(--rose-dark);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Кнопка "В корзину" */
+.add-to-cart {
+    background: var(--green-dark);
+    color: var(--white);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.add-to-cart:hover {
+    background: var(--green-medium);
+}
+
+.add-to-cart.added {
+    background: var(--rose-dark);
+}
+
+/* Футер - прижат к низу */
+footer {
+    background-color: var(--green-dark);
+    color: var(--white);
+    padding: 40px 0;
+    /* Убираем margin-top, чтобы футер был в самом низу */
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 1fr; 
+    gap: 215px; 
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: var(--rose-light);
+    font-weight: 300;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: var(--rose-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: var(--rose-medium);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.cart-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--rose-dark);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    font-size: 12px;
+    max-width: 200px;
+}
+
+/*Стили для времени года*/
+.season-label {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.season-label.spring {
+    background: rgba(76, 175, 80, 0.9); /* Зеленый для весны */
+}
+
+.season-label.summer {
+    background: rgba(255, 193, 7, 0.9); /* Желтый для лета */
+}
+
+.season-label.autumn {
+    background: rgba(255, 87, 34, 0.9); /* Оранжевый для осени */
+}
+
+.season-label.winter {
+    background: rgba(33, 150, 243, 0.9); /* Синий для зимы */
+}
+
+/*Иконки акк и корзины*/
+.icon {
+    fill: currentColor;
+    transition: fill 0.3s ease;
+}
+
+.icon-link:hover .icon {
+    fill: var(--rose-dark);
+}
+
+.icon-link.active .icon {
+    fill: var(--rose-dark);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 992px) {
+    .bouquets-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container {
+        flex: 1;
+    }
+    
+    footer {
+        margin-top: auto;
+    }
+    
+    .bouquets-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+    
+    .bouquet-image {
+        height: 200px;
+    }
+    
+    .bouquet-name {
+        font-size: 14px;
+        min-height: 40px;
+        margin-bottom: 10px;
+    }
+    
+    .bouquet-art {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .size-selection label {
+        font-size: 12px;
+    }
+    
+    .size-select {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+    
+    .bouquet-price {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .add-to-cart {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .page-title {
+        font-size: 28px;
+        margin: 30px 0 10px;
+    }
+    
+    .page-subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    
+    .category-filters {
+        margin-bottom: 25px;
+        padding: 15px 0;
+    }
+    
+    .filter-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+        min-width: 100px;
+    }
+}
+

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой аккаунт - Maison des Fleurs</title>
+    <link rel="stylesheet" href="../css/bouquets-style.css">
+    <link rel="stylesheet" href="../css/burger-menu.css">
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">Maison des Fleurs</a>
+                
+                <!-- Desktop Navigation -->
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">ГЛАВНАЯ</a></li>
+                        <li><a href="bouquets.html">КАТАЛОГ</a></li>
+                        <li><a href="about.html">О НАС</a></li>
+                        <li><a href="contacts.html">КОНТАКТЫ</a></li>
+                        <li class="account-icon">
+                            <a href="account.html" class="active" class="icon-link" title="Мой аккаунт">
+                                <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="cart-icon">
+                            <a href="cart.html" class="cart-link">
+                                <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                                </svg>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Бургер-меню для мобильных -->
+                <button class="burger-menu" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            
+        
+        <!-- Мобильная навигация -->
+        <div class="mobile-nav">
+            <ul>
+                <li><a href="../index.html" class="mobile-nav-link">ГЛАВНАЯ</a></li>
+                <li><a href="bouquets.html" class="mobile-nav-link">КАТАЛОГ</a></li>
+                <li><a href="about.html" class="mobile-nav-link">О НАС</a></li>
+                <li><a href="contacts.html" class="mobile-nav-link">КОНТАКТЫ</a></li>
+                <!-- Иконки также в мобильном меню -->
+                <li class="mobile-account-icon">
+                    <a href="account.html" class="active"  class="mobile-nav-link">
+                        <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                        Мой аккаунт
+                    </a>
+                </li>
+                <li class="mobile-cart-icon">
+                    <a href="cart.html" class="mobile-nav-link">
+                        <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                        </svg>
+                        Корзина <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Затемнение фона -->
+        <div class="overlay"></div>
+    </header>
+
+    <div class="container">
+        <section class="account-section">
+            <h1 class="page-title">Мой аккаунт</h1>
+            <p class="page-subtitle">Укажите ваши данные для заказов</p>
+            
+            <div class="account-container">
+                <!-- Форма аккаунта -->
+                <div class="account-card">
+                    <div class="account-header">
+                        <h2><i class="fas fa-user-circle"></i> Личные данные</h2>
+                        <p>Эти данные будут использоваться для связи с вами</p>
+                    </div>
+                    
+                    <form id="account-form" class="account-form">
+                        <div class="form-group">
+                            <label for="user-name">
+                                <i class="fas fa-user"></i> Имя <span class="required">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="user-name" 
+                                name="name" 
+                                placeholder="Введите ваше имя" 
+                                required
+                                autocomplete="name"
+                            >
+                            <div class="form-hint">Например: Дарья</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="user-phone">
+                                <i class="fas fa-phone"></i> Номер телефона <span class="required">*</span>
+                            </label>
+                            <div class="phone-input-wrapper">
+                                
+                                <input 
+                                    type="tel" 
+                                    id="user-phone" 
+                                    name="phone" 
+                                    placeholder="(999) 123-45-67" 
+                                    required
+                                    maxlength="15"
+                                    autocomplete="tel"
+                                >
+                            </div>
+                            <div class="form-hint">Формат: +7 (XXX) XXX-XX-XX</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="user-email">
+                                <i class="fas fa-envelope"></i> Электронная почта <span class="required">*</span>
+                            </label>
+                            <input 
+                                type="email" 
+                                id="user-email" 
+                                name="email" 
+                                placeholder="example@mail.ru" 
+                                required
+                                autocomplete="email"
+                            >
+                            <div class="form-hint">На эту почту будут приходить уведомления о заказах</div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn-save">
+                                <i class="fas fa-save"></i> Сохранить данные
+                            </button>
+                            <button type="button" class="btn-reset" id="reset-btn">
+                                <i class="fas fa-redo"></i> Очистить
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- Уведомление об успешном сохранении -->
+                    <div class="notification" id="success-notification">
+                        <div class="notification-content">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Данные сохранены!</h4>
+                                <p>Ваша информация успешно обновлена</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Магазин</h3>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Условия и рекомендации</h3>
+                    <ul>
+                        <li><a href="care.html">Уход за букетом</a></li>
+                        <li>Feedback@maison-fleurs.ru</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Телефон: +7 (495) 052-52-67</li>
+                        <li>Email: info@maison-fleurs.ru</li>
+                        <li>Адрес: Москва, Кривоколенный пер., 10, стр. 6</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Maison des Fleurs. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/account.js"></script>
+    <script src="../js/burger.js"></script>
+</body>
+</html>

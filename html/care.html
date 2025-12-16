@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уход за цветами - Maison des Fleurs</title>
+    <link rel="stylesheet" href="../css/bouquets-style.css">
+    <link rel="stylesheet" href="../css/burger-menu.css">
+    <link rel="stylesheet" href="../css/care.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">Maison des Fleurs</a>
+                
+                <!-- Desktop Navigation -->
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">ГЛАВНАЯ</a></li>
+                        <li><a href="bouquets.html">КАТАЛОГ</a></li>
+                        <li><a href="about.html">О НАС</a></li>
+                        <li><a href="contacts.html">КОНТАКТЫ</a></li>
+                        <li class="account-icon">
+                            <a href="account.html" class="icon-link" title="Мой аккаунт">
+                                <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="cart-icon">
+                            <a href="cart.html" class="cart-link">
+                                <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                                </svg>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Бургер-меню для мобильных -->
+                <button class="burger-menu" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+           
+    
+        
+        <!-- Мобильная навигация -->
+        <div class="mobile-nav">
+            <ul>
+                <li><a href="../index.html" class="mobile-nav-link">ГЛАВНАЯ</a></li>
+                <li><a href="bouquets.html" class="mobile-nav-link">КАТАЛОГ</a></li>
+                <li><a href="about.html" class="mobile-nav-link">О НАС</a></li>
+                <li><a href="contacts.html" class="mobile-nav-link">КОНТАКТЫ</a></li>
+                <!-- Иконки также в мобильном меню -->
+                <li class="mobile-account-icon">
+                    <a href="account.html" class="mobile-nav-link">
+                        <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                        Мой аккаунт
+                    </a>
+                </li>
+                <li class="mobile-cart-icon">
+                    <a href="cart.html" class="mobile-nav-link">
+                        <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                        </svg>
+                        Корзина <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Затемнение фона -->
+        <div class="overlay"></div>
+    </header>
+
+    <div class="container">
+        <section class="care-section">
+            <h1 class="page-title">Уход за цветами</h1>
+            
+            <!-- Основные правила ухода -->
+            <div class="care-block">
+                <h2>ОСНОВНЫЕ ПРАВИЛА УХОДА ЗА СРЕЗАННЫМИ ЦВЕТАМИ</h2>
+                <div class="care-content">
+                    <p>Правильный уход позволяет продлить жизнь букета и сохранить его свежесть до 2-3 недель. Следуйте нашим рекомендациям:</p>
+                    
+                    <div class="care-tips">
+                        <div class="care-tip">
+                            <div class="tip-icon">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h3>Правильная подрезка стеблей</h3>
+                                <p>Подрезайте стебли под углом 45° острым ножом или секатором. Это увеличивает площадь впитывания воды. Обновляйте срез каждые 2-3 дня.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="care-tip">
+                            <div class="tip-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h3>Чистая вода и регулярная замена</h3>
+                                <p>Меняйте воду ежедневно, тщательно промывая вазу. Добавляйте специальное питательное средство для цветов, которое мы прилагаем к каждому заказу.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="care-tip">
+                            <div class="tip-icon">
+                                <i class="fas fa-temperature-low"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h3>Оптимальная температура</h3>
+                                <p>Храните букет при температуре 18-22°C, вдали от отопительных приборов и прямых солнечных лучей. Ночью можно переносить в более прохладное место.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="care-tip">
+                            <div class="tip-icon">
+                                <i class="fas fa-wind"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h3>Защита от сквозняков</h3>
+                                <p>Избегайте размещения цветов на сквозняках, возле кондиционеров или открытых окон. Сквозняки ускоряют увядание.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Условия хранения -->
+            <div class="storage-block">
+                <h2>УСЛОВИЯ ХРАНЕНИЯ</h2>
+                <div class="storage-content">
+                    <div class="storage-grid">
+                        <div class="storage-item">
+                            <div class="storage-header">
+                                <i class="fas fa-sun"></i>
+                                <h3>Освещение</h3>
+                            </div>
+                            <p>Рассеянный свет без прямых солнечных лучей. Идеально подходит северное или восточное окно с занавеской.</p>
+                        </div>
+                        
+                        <div class="storage-item">
+                            <div class="storage-header">
+                                <i class="fas fa-thermometer-half"></i>
+                                <h3>Температурный режим</h3>
+                            </div>
+                            <p>Дневная: 18-22°C, ночная: 15-18°C. Резкие перепады температуры сокращают жизнь цветов.</p>
+                        </div>
+                        
+                        <div class="storage-item">
+                            <div class="storage-header">
+                                <i class="fas fa-apple-alt"></i>
+                                <h3>Соседство с фруктами</h3>
+                            </div>
+                            <p>Не размещайте цветы рядом со спелыми фруктами. Они выделяют этилен, который ускоряет увядание.</p>
+                        </div>
+                        
+                        <div class="storage-item">
+                            <div class="storage-header">
+                                <i class="fas fa-leaf"></i>
+                                <h3>Удаление листьев</h3>
+                            </div>
+                            <p>Удалите листья, которые могут оказаться в воде. Это предотвратит гниение и появление бактерий.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="important-note">
+                        <div class="note-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="note-content">
+                            <h3>Важно знать:</h3>
+                            <p>Разные цветы требуют особого ухода. Розы предпочитают глубокую воду, тюльпаны продолжают расти в вазе, а гортензии любят ежедневное опрыскивание. Подробные инструкции по конкретным цветам прилагаются к каждому заказу.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Таблица ухода по видам цветов -->
+            <div class="flowers-table">
+                <h2>ОСОБЕННОСТИ УХОДА ПО ВИДАМ ЦВЕТОВ</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Вид цветов</th>
+                                <th>Частота смены воды</th>
+                                <th>Температура</th>
+                                <th>Особые рекомендации</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Розы</strong></td>
+                                <td>Каждые 2 дня</td>
+                                <td>18-20°C</td>
+                                <td>Удаляйте шипы под водой, подрезайте стебли под водой</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Тюльпаны</strong></td>
+                                <td>Каждый день</td>
+                                <td>15-18°C</td>
+                                <td>Используйте холодную воду, стебли продолжают расти</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Пионы</strong></td>
+                                <td>Каждые 3 дня</td>
+                                <td>18-22°C</td>
+                                <td>Удаляйте пыльцу с лепестков, чтобы продлить цветение</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Орхидеи</strong></td>
+                                <td>1 раз в неделю</td>
+                                <td>20-24°C</td>
+                                <td>Опрыскивайте воздушные корни, избегайте попадания воды в сердцевину</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Гортензии</strong></td>
+                                <td>Каждый день</td>
+                                <td>16-20°C</td>
+                                <td>Ежедневно опрыскивайте цветы, можно погружать в воду на ночь</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Контакт для консультаций -->
+            <div class="consultation-block">
+                <div class="consultation-content">
+                    <h3>Нужна консультация по уходу?</h3>
+                    <p>Наши флористы всегда готовы помочь с советом по уходу за вашим букетом. Звоните или пишите нам в любое время.</p>
+                    <a href="contacts.html" class="consultation-btn">Связаться с нами</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Магазин</h3>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Условия и рекомендации</h3>
+                    <ul>
+                        <li><a href="care.html">Уход за букетом</a></li>
+                        <li>Feedback@maison-fleurs.ru</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Телефон: +7 (495) 052-52-67</li>
+                        <li>Email: info@maison-fleurs.ru</li>
+                        <li>Адрес: Москва, Кривоколенный пер., 10, стр. 6</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Maison des Fleurs. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+
+    <script src="../js/script.js"></script>
+    <script src="../js/burger.js"></script>
+</body>
+</html>
